@@ -1,0 +1,245 @@
+/* General body, fonts & @media */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 100% bree serif;
+  color: hsl(0, 0%, 80%);
+}
+
+a {
+  color: hsl(0, 0%, 90%);
+}
+
+@media (max-width: 1100px) {
+  #projects .project-tile {font-size: 20px; margin: 0; height: 50%;}
+  #contact div {transform: scale(0.7);}
+}
+
+.font-title {
+  font-size: 28px;
+  text-align: center; 
+}
+
+#logo {
+  width: 20%;
+}
+
+/* Header & Navigation */
+#page-title {
+  color: hsl(0, 0%, 90%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  padding: 20px;
+  background: hsl(200, 50%, 30%);
+  border-bottom: 2px solid black;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+}
+
+#navbar a {
+  text-align: right;
+  font-size: 28px;
+  margin-right: 30px;
+}
+
+header a:hover {
+  animation-name: nav-hover;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-hover {
+  100% {color: hsl(0,70%,60%);}
+}
+
+
+/* MAIN */
+
+/* Intro */
+#welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(0, 0%, 15%);
+  width: 100%;
+  height: 600px;
+  color: hsla(0, 50%, 50%, 0.8);
+}
+
+.font-lightblue {
+  font-family: monospace;
+  color: hsl(200, 50%, 30%);
+  text-decoration: underline;
+}
+
+
+
+/* Projects */
+#projects {
+  background: hsl(200, 60%, 20%);
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+#projects-title {
+  width: 100%;
+  padding-top: 40px;
+  color: rgb(212, 139, 28)
+}
+
+.projects-grid {
+  margin: auto;
+  height: 60%;
+  width: 80%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(8, 10%);
+  grid-template-rows: repeat(6, 13.3%);
+  grid-gap: 2.5%;
+  grid-template:
+    '. ww ww tt tt tc tc .'
+    '. ww ww tt tt tc tc .'
+    'ac ac c c ds ds fv fv'
+    'ac ac c c ds ds fv fv'
+    'is1 is1 is2 is2 jod jod pb pb'
+    'is1 is1 is2 is2 jod jod pb pb';
+}
+
+#word-wizard {grid-area: ww;}
+#task-tracker {grid-area: tt;}
+#tax-calculator {grid-area: tc;}
+#clock {grid-area: ac;}
+#calculator {grid-area: c;}
+#dog-slideshow {grid-area: ds;}
+#form {grid-area: fv;}
+#img-slider1 {grid-area: is1;}
+#img-slider2 {grid-area: is2;}
+#joke-of-day {grid-area: jod;}
+#progress-bar {grid-area: pb;}
+
+.project-tile {
+  color: hsla(51, 68%, 67%, 0.685);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 70%;
+  margin: 20px;
+  background: hsla(187, 88%, 22%, 0.8);
+  border-radius: 4px;
+  box-shadow: 4px 4px hsl(0, 0%, 7%);
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.project-tile p {
+  display: inline;
+  opacity: 0;
+}
+
+.project-tile:hover {
+  animation-name: project-hover;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.project-tile:hover p {
+  animation-name: project-p-hover;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.row1 {
+  color:;
+}
+
+@keyframes project-hover {
+  100% {
+    color:hsla(113, 67%, 46%, 0.877);transform: scale(1.1); box-shadow: 2px 2px hsl(0, 0%, 7%);}
+}
+
+@keyframes project-p-hover {
+  100% {color: hsl(200, 50%, 45%); opacity: 1.0; transform: scale(1.1);}
+}
+
+
+
+/* Contact */
+#contact {
+  height: 600px;
+  background-color: hsl(0, 0%, 15%);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat (5, 10%);
+  grid-template-rows: repeat (4, 10px);
+  justify-items: center;
+
+  grid-template:
+    'ct ct ct ct ct'
+    'ct ct ct ct ct '
+    '. . . . .'
+    '. gh fcc e .';
+}
+
+#contact-title {grid-area: ct; color: hsl}
+#github {grid-area: gh;}
+.fa-github-square {color: hsl(263, 42%, 46%);}
+#FCC {grid-area: fcc;}
+.fa-free-code-camp {color:hsl(32, 71%, 41%)}
+#email {grid-area: e;}
+.fa-at {color: hsl(200, 64%, 34%)}
+
+
+#contact-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#contact-title {
+  color: rgba(43, 255, 36, 0.418)
+}
+
+.contact-img {
+  transform: scale(5);
+}
+
+.contact-img:hover {
+  animation-name: contact-hover;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes contact-hover {
+  100% {transform: scale(5.5);};
+}
+
+
+
+/* FOOTER */
+footer {
+  border-top: solid 4px;
+  border-color: hsl(200, 50%, 30%);
+  text-align: center;
+  margin-top: -4px;
+  background-color: hsl(0, 0%, 15%);
+}

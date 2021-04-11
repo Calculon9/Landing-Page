@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Form Verfication</title>
+</head>
+<body>
+    <div class="container">
+        
+      <div class="row">
+        <div class="col-md-6 bg-dark rounded-left">
+          <h1 class="display-4 text-light text-center mt-4 mb-5">Welcome Adventurer!</h1>
+          <p class="text-center text-white mt-5 mb-5">Are you ready to do lots of cool stuff? Look no further, you're in the right place. Create an account and dive on in.</p>
+          <div class='d-flex justify-content-center mt-5'>
+            <img src="./imgs/form-img.png" alt="Game icon">
+          </div>
+        </div>
+        <div class="col-md-6 bg-light rounded-right">
+          <h1 class="display-4 text-center m-4">Create an Account</h1>
+          <p class="text-center">Complete the required fields then click SUBMIT.
+          <form>
+            <div class="form-group m-2">
+                <label for="fname">First Name:</label>
+                <input class="form-control" type="text" id="fname">
+            </div>
+            <div class="form-group m-2">
+                <label for="lname">Last Name:</label>
+                <input class="form-control" type="text" id="lname">
+            </div>
+            <div class="form-group m-2">
+                <label for="email">Email:</label>
+                <input class="form-control" type="text" id="email" placeholder="abc@example.com">
+            </div>
+            <div class="form-group m-2">
+                <label for="password">Password:</label>
+                <input class="form-control" type="password" id="password">
+            </div>
+            <div class="form-group m-2">
+              <label for="confirm-password">Confirm password:</label>
+              <input class="form-control" type="password" id="confirm-password">
+            </div>
+            <div class="form-group m-2">
+              <button class="form-control btn-secondary" type="submit" id="submit">SUBMIT</button>
+            </div>
+          </form>
+        </div> 
+      </div>
+    </div>
+    <script rel="text/javascript" src="./scripts/form.js"></script>
+</body>
+</html>

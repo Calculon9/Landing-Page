@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Righteous&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 230, 0);
+    font-family: ibm plex mono;
+    font-weight: 0;
+    color: white;
+    font-weight: bold;
+}
+
+/* CLOCK STYLES */
+
+.clock {
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+    width: 400px;
+   
+    border-radius: 8px;
+}
+#date {
+    margin-bottom: 5%;
+}
+
+.char {
+    box-shadow: 5px 5px rgba(128, 128, 128, 0.616);
+    background-color: rgb(168, 70, 70);
+    color: rgb(255, 230, 0);
+    border-radius: 10%;
+    padding: 3px;
+}
+
+/* CARD CREATOR STYLES */
+
+#container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#inner-form {
+    width: 250px;
+    background-color: rgb(209, 141, 24);
+    border-radius: 8px;
+    box-shadow: 3px 3px  rgba(0, 0, 0, 0.212);
+}
+
+::placeholder {
+    color: red;
+    opacity: 1; 
+  }
+
+form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#description-form {
+   resize: none;
+   height: 100px;
+}
+
+input, textarea {
+    background-color: rgb(250, 241, 161);
+    width: 95%;
+}
+
+.form-item {
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+    color: rgb(168, 70, 70);
+}
+
+#add-item {
+    font-family: ibm plex mono;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: rgb(168, 70, 70);
+    color: rgb(255, 230, 0);
+    font-size: 1.2rem;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#add-item:hover {
+    background-color: rgb(255, 230, 0);
+    color: rgb(168, 70, 70);
+}
+
+.border {
+    border-radius: 3px;
+    border: none;  
+}
+
+#title-creator {
+    color: rgb(255, 230, 0);
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: rgb(168, 70, 70);;
+}
+
+.warning {
+    padding: 5px;
+    margin-top: 20px;
+    background-color: rgba(255, 0, 0, 0.76);
+    color:  #e5ff00;
+    text-align: center;
+    font-size: 1rem;
+    border: solid black 1px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+.success {
+    padding: 5px;
+    margin-top: 20px;
+    background-color: rgba(77, 240, 27, 0.76);
+    color:  black;
+    text-align: center;
+    font-size: 1rem;
+    border: solid black 1px;
+    border-radius: 2px;
+    font-weight: bold;  
+}
+
+/* CARDS */
+
+#calender-deck {
+   display: grid;
+   grid-template-columns: repeat(2, 250px);
+   grid-template-rows: repeat(4, auto);
+   grid-gap: 10px;
+}
+
+.card {
+    width: 250px;
+    background-color: rgba(139, 69, 19, 0.678);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.212);
+}
+
+.card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrap {
+    word-wrap: break-word;
+    word-break:break-all
+}
+
+#card-title {
+    color: rgb(255, 230, 0);
+    padding: 15px;
+    font-size: 2rem;
+    background-color: rgb(168, 70, 70);
+    border-radius: 5px;
+}
+
+#card-description {
+    padding: 15px;
+    color: rgb(168, 70, 70);
+    font-size: 1.4rem;
+    background-color: rgb(209, 141, 24);
+}
+
+#card-due  {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(209, 141, 24);
+    padding-bottom: 15px;
+}
+
+.remove {
+    border-radius: 0 0 4px 4px;
+    border: solid 1px;
+    padding: 5px;
+    width: 100%;
+    font-weight: bold;
+    color: #000000af;
+    font-size: 1.4rem;
+    background-color: rgb(255, 230, 0);
+}
+
+.remove:hover {
+    background-color: rgb(255, 240, 120);
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.815);
+    font-family: Roboto, sans-serif;
+    font-size: 1.4em;
+    color: rgb(210, 210, 210);
+}
+
+.container {
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    width: 60vh;
+    height: 75vh;
+    background-color: rgba(0, 119, 255, 0.678);
+}
+
+.outer {
+    --fraction: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 65%;
+    height: 50px;
+    background-color: rgba(182, 209, 235, 0.7);
+    border: 3px solid rgb(65, 65, 65);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.inner {
+    --fraction: 0;
+    width: calc(var(--fraction) * 100%);
+    height: 100%;
+    transition: width 0.4s ease-in-out;
+    border-radius: 20px;
+}
+
+.progress {
+    font-weight: bold;
+    position: absolute;
+    left: 43%;
+    z-index: 2;
+    color: rgba(0, 0, 0, 0.815);
+}
+
+button {
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    width: 130px;
+    padding: 10px;
+    outline: none;
+}
+
+#run {
+    background-color: rgb(144, 255, 100);
+}
+
+#reset {
+    background-color: rgb(255, 200, 35);
+}
+
+#reset:hover {
+    background-color: rgb(250, 227, 144);
+}
+
+#run:hover {
+    background-color: rgb(186, 253, 159);
+}
